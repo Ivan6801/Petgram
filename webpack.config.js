@@ -14,6 +14,10 @@ module.exports = {
     filename: 'app.bundle.js',
     publicPath: '/'
   },
+  mode: 'development',
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   plugins: [
     new HtmlWebpackPlugin({ template: './public/index.html' })
   ],
