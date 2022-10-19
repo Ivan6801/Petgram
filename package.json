@@ -49,7 +49,8 @@
     "react-loading-icons": "^1.1.0",
     "react-router-dom": "^6.4.2",
     "react-spinners": "^0.13.6",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "vercel": "^28.4.12"
   },
   "standard": {
     "ignore": [
