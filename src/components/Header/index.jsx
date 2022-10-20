@@ -3,7 +3,7 @@ import { Button } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 
 export default function Header () {
-  const [t, i18n] = useTranslation('global')
+  const { t, i18n } = useTranslation('global')
 
   return (
     <div>
