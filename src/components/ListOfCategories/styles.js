@@ -24,4 +24,8 @@ export const List = styled.ul`
   -webkit-box-shadow: inset 0 0 6px rgba(1, 1, 1, 0.5);
           box-shadow: inset 0 0 6px rgba(1, 1, 1, 0.5);
   }
+  
+`
+export const Item = styled.li`
+  padding: 0 8px;
 `
