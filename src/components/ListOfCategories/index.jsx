@@ -10,6 +10,8 @@ export default function ListOfCategories () {
   const [showFixed, setShowFixed] = useState(false)
   const list = useRef(null)
 
+  console.log(categories)
+
   useEffect(function () {
     window.fetch('https://petgram-serve-jorge-vicuna.vercel.app/categories')
       .then(res => res.json())
