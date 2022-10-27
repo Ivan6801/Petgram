@@ -39,6 +39,6 @@ export const List = styled.ul`
   }
   
 `
-export const Item = styled.li`
+export const Item = styled.div`
   padding: 0 8px;
 `
