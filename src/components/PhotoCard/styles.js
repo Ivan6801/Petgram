@@ -10,7 +10,6 @@ export const ImgWrapper = styled.div`
   position: relative;
   width: 100%;
 `
-
 export const Img = styled.img`
   ${fadeIn()}
   box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
