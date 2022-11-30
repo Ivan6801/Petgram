@@ -1,7 +1,7 @@
 import React from 'react'
 import { PhotoCard } from '../components/PhotoCard'
 
-import { gql } from 'apollo-boost'
+import { gql } from '@apollo/client'
 import { Query } from 'react-apollo'
 
 const GET_SINGLE_PHOTO = gql`
