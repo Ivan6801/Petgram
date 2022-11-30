@@ -56,7 +56,7 @@
     "react-router-dom": "^6.4.2",
     "react-spinners": "^0.13.6",
     "styled-components": "^5.3.6",
-    "vercel": "^28.4.12"
+    "vercel": "^19.1.2"
   },
   "standard": {
     "ignore": [
