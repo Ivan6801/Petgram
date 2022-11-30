@@ -1,5 +1,5 @@
 import React from "react";
-import { gql } from "apollo-boost";
+import { gql } from "@apollo/client";
 import { Mutation } from "react-apollo";
 
 const LIKE_PHOTO = gql`
