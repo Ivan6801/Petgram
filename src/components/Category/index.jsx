@@ -1,5 +1,5 @@
 import React from 'react'
-import { Anchor, Image } from './styles'
+import { Link, Image } from './styles'
 
 const DEFAULT_IMAGE = 'https://res.cloudinary.com/midudev/image/upload/w_150/v1555671700/category_cats.jpg'
 
@@ -9,10 +9,10 @@ export default function Category ({
   emoji = '🐶'
 }) {
   return (
-    <Anchor href={path}>
+    <Link to={path}>
       <Image src={cover} alt={emoji} />
       {emoji}
-    </Anchor>
+    </Link>
 
   )
 }
