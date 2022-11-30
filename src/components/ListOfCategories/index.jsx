@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { CircularProgress, Box } from "@mui/material";
 import Category from "../Category";
 import { List, Item } from "./styles";
 import useCategoriesData from "../../hooks/useCategoriesData";
@@ -28,9 +27,9 @@ export default function ListOfCategories() {
   const renderList = (fixed) => (
     <List ref={list} className={fixed ? "fixed" : ""}>
       {loading ? (
-        <Box sx={{ display: "flex" }}>
-          <CircularProgress />
-        </Box>
+        <div>
+          <p>Loading...</p>
+        </div>
       ) : (
         categories.map((category) => (
           <Item key={category.id}>
