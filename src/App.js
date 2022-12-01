@@ -1,28 +1,46 @@
 import React from "react";
 import { GlobalStyles } from "./styles/GlobalStyles";
-import AppRouter from "./router/AppRouter";
+import { Router } from "@reach/router";
+import { Detail } from "./pages/Detail";
+import Home from "./pages/Home";
 import Logo from "./components/Logo";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { PhotoCardWithQuery } from "./containers/PhotoCardWithQuery";
+import NavBar from "./components/NavBar";
+import User from "./pages/User";
+import Favs from "./pages/Favs";
+import NotRegisteredUser from "./pages/NotRegisteredUser";
+
+const UserLogged = ({ children }) => {
+  return children({ isAuth: true });
+};
 
 export default function App() {
-  const urlParams = new URLSearchParams(location.search);
-  const detailId = urlParams.get("detail");
-
   return (
-    <>
+    <div>
       <GlobalStyles />
       <Logo />
-      {detailId ? (
-        <PhotoCardWithQuery id={detailId} />
-      ) : (
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<AppRouter />} />
-            <Route path="/pet/:id" element={<AppRouter />} />
-          </Routes>
-        </BrowserRouter>
-      )}
-    </>
+      <Router>
+        <Home path="/" />
+        <Home path="/pet/:categoryId" />
+        <Detail path="/detail/:detailId" />
+      </Router>
+
+      <UserLogged>
+        {({ isAuth }) =>
+          isAuth ? (
+            <Router>
+              <Favs path="/favs" />
+              <User path="/user" />
+            </Router>
+          ) : (
+            <Router>
+              <NotRegisteredUser path="/favs" />
+              <NotRegisteredUser path="/user" />
+            </Router>
+          )
+        }
+      </UserLogged>
+
+      <NavBar />
+    </div>
   );
 }
